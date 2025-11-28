@@ -8,7 +8,7 @@ public class UserService extends userGrpc.userImplBase {
         String username=request.getUserName();
         String password=request.getPassword();
         User.LoginResponse.Builder response= User.LoginResponse.newBuilder();
-        if(username.equals(password)) {
+        if(username.equals("Admin") && password.equals("123")) {
             response.setIdResponse(0).setMsgResponse("SUCCES");
         }
         else
